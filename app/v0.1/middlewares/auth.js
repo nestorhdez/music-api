@@ -114,16 +114,11 @@ passport.use(new GoogleToken({
                 let newUser = new User(newUserData)
                 newUser.save()
                     .then(() => {
-                        console.log('Then save')
                         done(null, newUser)
                     })
                     .catch(error => {
-                        console.log('Catch save')
                         done(error, false)
                     })
-                // return newUser.save()
-                //     .then(() => done(null, newUser))
-                //     .catch(error => done(error, false))
             }
         })
         .catch(error => {

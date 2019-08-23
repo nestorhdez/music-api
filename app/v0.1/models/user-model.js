@@ -22,6 +22,9 @@ const UserSchema = mongoose.Schema({
         select: false,
         required: true
     },
+    googleId: {
+        type: String
+    },
     role: {
         type: String,
         enum: ["ROLE_USER",

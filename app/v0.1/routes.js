@@ -20,6 +20,7 @@ router.delete('/songs/:id', songsController.deleteSong)
 router.post('/signup', userController.signUp)
 router.post('/login', userController.logIn)
 router.post('/token', jwt.refreshToken)
+router.post('/google/auth', pass.googleAuth, userController.loginGoogle)
 
 
 
